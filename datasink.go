@@ -65,7 +65,6 @@ func (e *EventStore) Create(event *Event) error {
 type EventSink struct {
 	eventStore  *EventStore
 	events      <-chan Event
-	termination chan struct{}
 }
 
 func NewEventSink(events <-chan Event, eventStore *EventStore) *EventSink {
