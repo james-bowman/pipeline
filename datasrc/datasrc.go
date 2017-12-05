@@ -34,7 +34,7 @@ func (e *Event) UnmarshalJSON(data []byte) error {
 
 	e.Id = alias.Id
 	e.Name = alias.Name
-	e.Time, err = time.Parse("2006-01-02:15:04:05Z", alias.Time)
+	e.Time, err = time.Parse("2006-01-02:15:04:05Z07:00", alias.Time)
 	e.Markets = alias.Markets
 
 	return err
